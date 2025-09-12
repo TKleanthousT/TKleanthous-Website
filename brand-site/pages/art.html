@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art — Tess Kleanthous</title>
+  <meta name="description" content="Graphite drawings, acrylic and gouache painting, and digital artwork by Tess Kleanthous." />
+  <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <!-- ===== Header + Nav ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true">TK</span>
+        <span class="brand__text">Tess Kleanthous</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="astrophysics.html" class="nav__link">Astrophysics</a>
+        <a href="engineering.html" class="nav__link">Engineering</a>
+        <a href="art.html" class="nav__link is-current" aria-current="page">Art</a>
+        <a href="language.html" class="nav__link">Languages</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="Kleanthous_CV.pdf" class="button button--primary" target="_blank" rel="noopener">Curriculum Vitae</a>
+      </nav>
+    </div>
+    <!-- Fading line under nav -->
+    <div class="header-fade" aria-hidden="true"></div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1>Art Portfolio</h1>
+          <p class="lead">
+            I work across graphite, paint, and digital media—focusing on form, light, and quiet narratives. Most of my painting is acrylic; I’m exploring <em>gouache</em> next.
+          </p>
+          <div class="hero__cta">
+            <a class="button" href="#mediums">Mediums</a>
+            <a class="button button--ghost" href="#gallery">Selected Works</a>
+          </div>
+        </div>
+        <figure class="hero__card">
+          <img src="../public/sculpture.jpg">
+          <figcaption>
+            <strong>Graphite • Acrylic • Digital</strong><br>
+            Studies in tone, color, and composition
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Mediums (cards) ===== -->
+    <section class="section" id="mediums">
+      <div class="container">
+        <div class="section__head">
+          <h2>Mediums</h2>
+          <p class="muted">How I like to work and what I’m exploring next.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <header>
+              <h3>Graphite</h3>
+              <p class="muted">Portraits • Figure • Still life</p>
+            </header>
+            <ul>
+              <li><span class="tag">Focus</span> Value structure, edges, and proportion.</li>
+              <li><span class="tag">Tech</span> Layered hatching, kneaded eraser lifts, textured paper.</li>
+              <li><span class="tag">Goal</span> Expressive realism with clean draftsmanship.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Paint (Acrylic → Gouache)</h3>
+              <p class="muted">Studies • Color • Abstraction</p>
+            </header>
+            <ul>
+              <li><span class="tag">Now</span> Acrylic on panel/canvas for fast layering.</li>
+              <li><span class="tag">Next</span> Gouache for matte surfaces and subtle blending.</li>
+              <li><span class="tag">Focus</span> Limited palettes, temperature shifts, and edges.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Digital</h3>
+              <p class="muted">iPad/Tablet • Concept Sketches</p>
+            </header>
+            <ul>
+              <li><span class="tag">Workflow</span> Thumbnails → value comps → color keys.</li>
+              <li><span class="tag">Use</span> Iteration for compositions & portfolio mockups.</li>
+              <li><span class="tag">Export</span> High-res PNGs for print or web.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Selected Works (tiles gallery) ===== -->
+    <section class="section section--surface" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <h2>Selected Works</h2>
+          <p class="muted">Swap in your pieces below. Duplicate tiles to add more.</p>
+        </div>
+
+        <div class="grid">
+          <!-- Graphite -->
+          <a class="tile" href="../public/Graphite.jpeg">
+            <div class="tile__media"><img src="../public/Graphite.jpeg" alt="Graphite study"></div>
+            <div class="tile__body">
+              <h3>Graphite</h3>
+              <p>HB–4B pencils on toned paper.</p>
+            </div>
+          </a>
+
+          <!-- Paint -->
+          <a class="tile" href="../public/Acrylic.jpeg">
+            <div class="tile__media"><img src="../public/Acrylic.jpeg" alt="Acrylic painting study"></div>
+            <div class="tile__body">
+              <h3>Acrylic Study</h3>
+              <p>Starry Night mural.</p>
+            </div>
+          </a>
+
+          <!-- Digital -->
+          <a class="tile" href="../public/DigitalArt.png">
+            <div class="tile__media"><img src="../public/DigitalArt.png" alt="Digital sketch"></div>
+            <div class="tile__body">
+              <h3>Digital Sketch</h3>
+              <p>Palette explortation in anatomical study.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="about__cta" style="margin-top: var(--space-3);">
+          <a class="button" href="contact.html">Commission / Inquiry</a>
+          <a class="button button--ghost" href="Kleanthous_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Notes / Process (optional) ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Process Notes</h2>
+          <p class="muted">A quick look at how I build a piece.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Starts & Studies</h3>
+            <p>Thumbnails for composition, then value studies (graphite or digital). I keep early passes loose to plan edges and focal points.</p>
+          </article>
+          <article class="card">
+            <h3>Color Decisions</h3>
+            <p>Limited palettes first; hue variation comes later. Acrylic layers move fast—gouache will help me refine soft transitions.</p>
+          </article>
+          <article class="card">
+            <h3>Finish & Export</h3>
+            <p>For digital, I export PNG/TIFF for print. For traditional, I photograph.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Tess Kleanthous</p>
+      <a class="footer__top" href="#content">Back to top</a>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>

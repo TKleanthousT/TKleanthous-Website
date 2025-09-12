@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Languages — Tess Kleanthous</title>
+  <meta name="description" content="Language studies in Greek, French, and Spanish; travel map with visited locations." />
+  <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css" />
+
+  <!-- Leaflet (for the interactive map) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <script
+    defer
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <style>
+    #travel-map {
+      height: 520px;
+      border-radius: var(--radius);
+      border: 1px solid color-mix(in lab, var(--color-surface) 65%, #000);
+      box-shadow: var(--shadow-1);
+    }
+    .map-legend {
+      margin-top: .75rem;
+      color: var(--color-muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header + Nav ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true">TK</span>
+        <span class="brand__text">Tess Kleanthous</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="astrophysics.html" class="nav__link">Astrophysics</a>
+        <a href="engineering.html" class="nav__link">Engineering</a>
+        <a href="art.html" class="nav__link">Art</a>
+        <a href="language.html" class="nav__link is-current" aria-current="page">Languages</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="Kleanthous_CV.pdf" class="button button--primary" target="_blank" rel="noopener">Curriculum Vitae</a>
+      </nav>
+    </div>
+    <div class="header-fade" aria-hidden="true"></div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__grid">
+            <div class="hero__content">
+                <h1>Language Studies</h1>
+                <p class="lead">
+                I study Greek, French, and Spanish—building on my French minor from Tulane—while connecting language learning with my travels and cultural experiences.
+                </p>
+                <div class="hero__cta">
+                <a class="button" href="#coursework">Preply Coursework</a>
+                <a class="button" href="#french-minor">French Minor</a>
+                <a class="button button--ghost" href="#travel">Travel Map</a>
+                </div>
+            </div>
+
+            <figure class="hero__card">
+                <img src="../public/globe.jpg" alt="Language & travel themed illustration">
+                <figcaption>
+                <strong>Greek • French • Spanish</strong><br>
+                Coursework, reading, conversation practice
+                </figcaption>
+            </figure>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== Other Coursework ===== -->
+    <section class="section" id="coursework">
+      <div class="container">
+        <div class="section__head">
+          <h2>Preply Coursework</h2>
+          <p class="muted">Ongoing tutoring via Preply; independent reading & conversation practice.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <header><h3>Greek</h3><p class="muted">Preply • Nov 2023 – present</p></header>
+            <ul>
+              <li><span class="tag">Focus</span> Reading & conversation; grammar drills; travel vocabulary.</li>
+              <li><span class="tag">Practice</span> Short essays & A1–B1 exercises.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <header><h3>French</h3><p class="muted">Preply • Nov 2024 – present</p></header>
+            <ul>
+              <li><span class="tag">Focus</span> Media-driven comprehension; composition & discussion.</li>
+              <li><span class="tag">Practice</span> News articles, cinema clips, short stories.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <header><h3>Spanish</h3><p class="muted">Preply • July 2025 – present</p></header>
+            <ul>
+              <li><span class="tag">Focus</span> Travel conversation, core grammar, listening.</li>
+              <li><span class="tag">Practice</span> Dialogues, everyday situations, reading.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== French Minor ===== -->
+    <section class="section section--surface" id="french-minor">
+      <div class="container">
+        <div class="section__head">
+          <h2>French Minor</h2>
+          <p class="muted">Tulane University — advanced coursework across literature, media, and film.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <header><h3>Overview</h3><p class="muted">Undergraduate Minor in French</p></header>
+            <ul>
+              <li><span class="tag">Strengths</span> Reading, composition, and discussion-based seminars.</li>
+              <li><span class="tag">Context</span> “What better place to learn a little French than in New Orleans!”</li>
+            </ul>
+          </article>
+          <article class="card">
+            <header><h3>Courses</h3><p class="muted">Selected classes</p></header>
+            <ul>
+              <li>Advanced French Through Media I</li>
+              <li>Advanced French Through Media II</li>
+              <li>French Short Story</li>
+              <li>Introduction to Literary Analysis</li>
+              <li>French Cinema</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Travel Map ===== -->
+    <section class="section" id="travel">
+      <div class="container">
+        <div class="section__head">
+          <h2>Travel Map</h2>
+          <p class="muted">Places I’ve visited!</p>
+        </div>
+
+        <div class="grid" style="grid-template-columns: 1fr;">
+          <div id="travel-map" role="region" aria-label="World map with travel markers"></div>
+          <p class="map-legend">
+            Markers shown for: <span class="tag">USA</span> (home), <span class="tag">France</span>, <span class="tag">Wales</span>, <span class="tag">England</span>, <span class="tag">Greece</span>, <span class="tag">Australia</span>, <span class="tag">New&nbsp;Zealand</span>, <span class="tag">Morocco</span>, <span class="tag">Mexico</span>, <span class="tag">Canada</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Tess Kleanthous</p>
+      <a class="footer__top" href="#content">Back to top</a>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+
+  <!-- Map setup -->
+  <script>
+    window.addEventListener('load', function () {
+      const map = L.map('travel-map', { scrollWheelZoom: false }).setView([28, -25], 2.2);
+
+      // Bright map: Carto Positron (light theme)
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }).addTo(map);
+
+      const places = [
+        { name: 'USA (home)',        lat: 39.8283, lng: -98.5795 },
+        { name: 'France',            lat: 46.2276, lng:   2.2137 },
+        { name: 'Wales',             lat: 52.1307, lng:  -3.7837 },
+        { name: 'England',           lat: 51.5074, lng:  -0.1278 },
+        { name: 'Greece',            lat: 39.0742, lng:  21.8243 },
+        { name: 'Australia',         lat: -25.2744, lng: 133.7751 },
+        { name: 'New Zealand',       lat: -40.9006, lng: 174.8860 },
+        { name: 'Morocco',           lat: 31.7917, lng:  -7.0926 },
+        { name: 'Mexico',            lat: 23.6345, lng: -102.5528 },
+        { name: 'Canada',            lat: 56.1304, lng: -106.3468 }
+      ];
+
+      const markers = places.map(p => L.marker([p.lat, p.lng]).bindPopup(`<strong>${p.name}</strong>`).addTo(map));
+      const group = new L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.25));
+    });
+  </script>
+</body>
+</html>

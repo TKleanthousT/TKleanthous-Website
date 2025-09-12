@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Astrophysics — Tess Kleanthous</title>
+  <meta name="description" content="PI & Graduate Research at Tufts; Astrophysical Laboratory work in MCMC modeling and EBs; Datasets and tools used for TESS light-curve analysis." />
+  <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <!-- ===== Header + Nav ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true">TK</span>
+        <span class="brand__text">Tess Kleanthous</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="astrophysics.html" class="nav__link is-current" aria-current="page">Astrophysics</a>
+        <a href="engineering.html" class="nav__link">Engineering</a>
+        <a href="art.html" class="nav__link">Art</a>
+        <a href="language.html" class="nav__link">Languages</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="Kleanthous_CV.pdf" class="button button--primary" target="_blank" rel="noopener">Curriculum Vitae</a>
+      </nav>
+    </div>
+    <!-- Fading line under nav -->
+    <div class="header-fade" aria-hidden="true"></div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1>Astrophysics</h1>
+          <p class="lead">
+            Eclipsing binaries, circumbinary planets, and celestial mechanics. I develop robust pipelines for TESS light curves—combining detrending, period validation, eclipse modeling, and rigorous vetting.
+          </p>
+          <div class="hero__cta">
+            <a class="button" href="#pi">PI & Graduate Research</a>
+            <a class="button" href="#lab">Astrophysics Laboratory</a>
+            <a class="button button--ghost" href="#datasets">Datasets & Tools</a>
+          </div>
+        </div>
+        <figure class="hero__card">
+          <img src="../public/TESS.webp" alt="Light-curve visualization">
+          <figcaption>
+            <strong>STANLEY Pipeline</strong><br>
+            Automated EB analysis & CBP search for TESS
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== (1) PI & Graduate Research Assistant — CARDS (like Industry Experience) ===== -->
+    <section class="section" id="pi">
+      <div class="container">
+        <div class="section__head">
+          <h2>PI & Graduate Research Assistant</h2>
+          <p class="muted">Tufts University • Sep 2024 – present • Supervisor: David Martin</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <header>
+              <h3>Project Title</h3>
+              <p class="muted"><em>A Robust Pipeline for TESS Eclipsing Binaries: Detrending, Period Validation, Eclipse Modeling, and Vetting</em></p>
+            </header>
+            <ul>
+              <li>Optimized the <strong>STANLEY</strong> algorithm to analyze TESS photometry for a systematic, automated search for circumbinary planets (CBPs).</li>
+              <li>End-to-end framework: gap-aware preprocessing, harmonic removal with model selection, iterative BLS & period refinement, eclipse modeling, and secondary-vetting logic.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Publications</h3>
+              <p class="muted">In preparation</p>
+            </header>
+            <ul>
+              <li><strong>Lead author:</strong> Manuscript describing the STANLEY pipeline—to be submitted for peer-reviewed publication.</li>
+            </ul>
+            <div class="about__cta" style="margin-top:.5rem;">
+              <a class="button button--ghost" href="Kleanthous_CV.pdf" target="_blank" rel="noopener">CV</a>
+              <a class="button" href="contact.html">Contact</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== (2) Astrophysics Laboratory — GRID TILES (like Design Work) ===== -->
+    <section class="section" id="lab">
+      <div class="container">
+        <div class="section__head">
+          <h2>Astrophysics Laboratory</h2>
+          <p class="muted">Tufts University • Spring 2025</p>
+        </div>
+
+        <div class="grid">
+          <!-- MCMC Modeling -->
+          <a class="tile" href="https://github.com/TKleanthousT/Astrophysics-Laboratory/blob/main/AST51Assignment4.ipynb">
+            <div class="tile__media">
+              <img src="../public/MCMCStarSpotModulation.png" alt="Modeled Star Spot Modulation of CM Draconis">
+            </div>
+            <div class="tile__body">
+              <h3>MCMC Modeling</h3>
+              <p class="muted">Posterior inference, trace diagnostics, best-fit overlays.</p>
+              <ul>
+                <li>Bayesian parameter inference for light-curve models (priors, likelihood, posterior).</li>
+                <li>Multi-walker chains, burn-in, autocorrelation and trace-based convergence checks.</li>
+                <li>Trace plots, residual QA, and model overlays.</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- EB Populations -->
+          <a class="tile" href="https://github.com/TKleanthousT/Astrophysics-Laboratory/blob/main/Astro_Project_II_Combined_Version.ipynb">
+            <div class="tile__media">
+              <img src="../public/EBPopulation.png" alt="EB population analysis visualization">
+            </div>
+            <div class="tile__body">
+              <h3>Eclipsing Binary Populations</h3>
+              <p class="muted">Data generation and analysis from synthetic populations.</p>
+              <ul>
+                <li>Population synthesis across orbital parameters, mass ratios, and periods.</li>
+                <li>Observation modeling: inclination geometry, eclipse probability, cadence effects.</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+        <div class="about__cta" style="margin-top: var(--space-3);">
+          <a class="button button--ghost" href="https://github.com/TKleanthousT">Github</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== (3) Datasets & Tools — CARDS (like Industry Experience) ===== -->
+    <section class="section section--surface" id="datasets">
+      <div class="container">
+        <div class="section__head">
+          <h2>Datasets & Tools</h2>
+          <p class="muted">Core data products, catalogs, and software used across projects.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <header>
+              <h3>Datasets</h3>
+            </header>
+            <ul>
+              <li><span class="tag">TESS</span> 20-second Target Pixel Files</li>
+              <li><span class="tag">Catalogs</span> ANTIC, Villanova EB</li>
+              <li><span class="tag">Eclipsing Binaries</span> EBs curated for CBP searches & validation</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Software & Methods</h3>
+            </header>
+            <ul>
+              <li><span class="tag">Python</span> NumPy, SciPy, Lightkurve</li>
+              <li><span class="tag">Dynamics</span> Rebound / N-body</li>
+              <li><span class="tag">Statistical Significance</span> Completeness, reliability, SDE diagnostics</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Compute</h3>
+            </header>
+            <ul>
+              <li><span class="tag">HPC</span> SLURM arrays, per-target caching, batch runs</li>
+              <li><span class="tag">Reproducibility</span> Notebooks & saved figures for validation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Tess Kleanthous</p>
+      <a class="footer__top" href="#content">Back to top</a>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>

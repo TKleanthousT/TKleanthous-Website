@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Tess Kleanthous</title>
+  <meta name="description" content="Get in touch with Tess Kleanthous for research, engineering, or collaboration." />
+  <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css" />
+
+  <!-- Form styles (minimal; uses your tokens) -->
+  <style>
+    .form {
+      display: grid;
+      gap: var(--space-2);
+      background: color-mix(in lab, var(--color-surface) 92%, #000);
+      border: 1px solid color-mix(in lab, var(--color-surface) 65%, #000);
+      border-radius: var(--radius);
+      padding: var(--space-3);
+      box-shadow: var(--shadow-1);
+    }
+    .field { display: grid; gap: .35rem; }
+    .field label { font-weight: 700; }
+    .field input, .field textarea {
+      width: 100%;
+      padding: .8rem 1rem;
+      border-radius: .6rem;
+      border: 1px solid color-mix(in lab, var(--color-surface) 65%, #000);
+      background: color-mix(in lab, var(--color-bg) 80%, #0000);
+      color: var(--color-text);
+    }
+    .field input::placeholder, .field textarea::placeholder { color: var(--color-muted); }
+    .field textarea { min-height: 160px; resize: vertical; }
+    .form__row { display: grid; gap: var(--space-2); grid-template-columns: 1fr 1fr; }
+    @media (max-width: 720px) { .form__row { grid-template-columns: 1fr; } }
+    .visually-hidden {
+      position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;
+    }
+    .form__actions { display: flex; gap: .75rem; align-items: center; }
+    .form__note { color: var(--color-muted); font-size: 0.95rem; }
+    .alert { margin-top: .5rem; font-size: 0.95rem; }
+    .alert--ok { color: #7bd389; }
+    .alert--err { color: #ff8a7a; }
+    .quick-links .card a { color: var(--color-text); text-decoration: none; }
+    .quick-links .card a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <!-- ===== Header + Nav ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true">TK</span>
+        <span class="brand__text">Tess Kleanthous</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="astrophysics.html" class="nav__link">Astrophysics</a>
+        <a href="engineering.html" class="nav__link">Engineering</a>
+        <a href="art.html" class="nav__link">Art</a>
+        <a href="language.html" class="nav__link">Languages</a>
+        <a href="contact.html" class="nav__link is-current" aria-current="page">Contact</a>
+        <a href="Kleanthous_CV.pdf" class="button button--primary" target="_blank" rel="noopener">Curriculum Vitae</a>
+      </nav>
+    </div>
+    <!-- Fading line under nav -->
+    <div class="header-fade" aria-hidden="true"></div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1>Contact</h1>
+          <p class="lead">
+            Interested in collaborating on astrophysics, engineering, or creative projects? Send a note below or reach out directly.
+          </p>
+          <div class="hero__cta">
+            <a class="button" href="#form">Send a Message</a>
+            <a class="button button--ghost" href="#links">Quick Links</a>
+          </div>
+        </div>
+        <figure class="hero__card">
+          <img src="../public/contact.png" alt="Abstract contact illustration">
+          <figcaption>
+            <strong>Let’s talk</strong><br>
+            Research • Prototyping • Outreach
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Contact Form ===== -->
+    <section class="section" id="form">
+      <div class="container">
+        <div class="section__head">
+          <h2>Send a Message</h2>
+          <p class="muted">I read every message—please include a bit about your project and timeline.</p>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <!-- Honeypot (anti-spam) -->
+          <div class="visually-hidden" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="How can I help?" required />
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project, interests, or question…" required></textarea>
+          </div>
+
+          <div class="form__actions">
+            <button class="button button--primary" type="submit">Send</button>
+            <span class="form__note">Or email me directly: <a href="mailto:tklean01@tufts.edu">tklean01@tufts.edu</a></span>
+          </div>
+
+          <div id="formAlert" class="alert" role="status" aria-live="polite"></div>
+        </form>
+
+        <!-- Submission helper script -->
+        <script>
+          // Lightweight client-side handler:
+          // - Validates required fields
+          // - If OK, opens a mailto: draft with prefilled body (works on static hosting)
+          // - You can swap this for Formspree/Netlify; see comments below.
+          (function () {
+            const form = document.getElementById('contactForm');
+            const alertEl = document.getElementById('formAlert');
+
+            function setAlert(msg, ok) {
+              alertEl.textContent = msg;
+              alertEl.className = 'alert ' + (ok ? 'alert--ok' : 'alert--err');
+            }
+
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+
+              const hp = form.website.value.trim();
+              if (hp) return; // honeypot: silently ignore
+
+              const name = form.name.value.trim();
+              const email = form.email.value.trim();
+              const subject = form.subject.value.trim();
+              const message = form.message.value.trim();
+
+              if (!name || !email || !subject || !message) {
+                setAlert('Please complete all fields.', false);
+                return;
+              }
+
+              // very simple email check
+              if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                setAlert('Please enter a valid email address.', false);
+                return;
+              }
+
+              // Build mailto draft
+              const to = 'YOUR_EMAIL@EXAMPLE.com'; // TODO: replace with your address
+              const body = [
+                `Name: ${name}`,
+                `Email: ${email}`,
+                `Subject: ${subject}`,
+                '',
+                message
+              ].join('%0D%0A'); // encoded newlines
+
+              const href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent('[Site] ' + subject)}&body=${body}`;
+              window.location.href = href;
+
+              setAlert('Opening your email client… if nothing happens, email me directly.', true);
+              form.reset();
+            });
+          })();
+
+          /* 
+            PRODUCTION OPTION (no code changes to your backend):
+            - Sign up for Formspree (free) and get an endpoint like https://formspree.io/f/xxxx
+            - Replace the <form> tag with:
+                <form class="form" id="contactForm" action="https://formspree.io/f/xxxx" method="POST">
+              Keep the same inputs (name/email/subject/message).
+            - Remove the JS handler above (or keep it as a fallback).
+          */
+        </script>
+      </div>
+    </section>
+
+    <!-- ===== Quick Links ===== -->
+    <section class="section section--surface" id="links">
+      <div class="container">
+        <div class="section__head">
+          <h2>Quick Links</h2>
+          <p class="muted">Prefer a direct route? These might be faster.</p>
+        </div>
+
+        <div class="cards quick-links">
+          <article class="card">
+            <h3>Email</h3>
+            <p><a href="mailto:tklean01@tufts.edu">tklean01@tufts.edu</a></p>
+          </article>
+
+          <article class="card">
+            <h3>CV</h3>
+            <p><a href="Kleanthous_CV.pdf" target="_blank" rel="noopener">Download PDF</a></p>
+          </article>
+
+          <article class="card">
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/tesskleanthous" target="_blank" rel="noopener">linkedin.com/in/tesskleanthous</a></p>
+          </article>
+
+          <article class="card">
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/TKleanthousT" target="_blank" rel="noopener">github.com/TKleanthousT</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Tess Kleanthous</p>
+      <a class="footer__top" href="#content">Back to top</a>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
