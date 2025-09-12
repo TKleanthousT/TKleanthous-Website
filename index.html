@@ -6,14 +6,13 @@
   <title>Tess Kleanthous — Astrophysics</title>
   <meta name="description" content="Astrophysics MS candidate focusing on celestial mechanics, exoplanets, and computational methods." />
   <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/TKleanthous-Website/brand-site/styles/style.css" />
+  <link rel="stylesheet" href="brand-site/styles/style.css" />
 </head>
 <body>
-  <div id="top"></div>
   <!-- ===== Header + Nav ===== -->
-<header class="site-header" role="banner">
-  <div class="container header__inner">
-      <a class="brand" href="/TKleanthous-Website/#top" aria-label="Home">
+  <header class="site-header" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="/TKleanthous-Website/" aria-label="Home">
         <span class="brand__mark" aria-hidden="true">TK</span>
         <span class="brand__text">Tess Kleanthous</span>
       </a>
@@ -68,10 +67,12 @@
             <h3>Celestial Mechanics</h3>
             <p>Orbital dynamics, stability, and resonances in binary and multi-body systems with an emphasis on model interpretability.</p>
           </article>
+
           <article class="card">
             <h3>Exoplanet Detection</h3>
             <p>End-to-end pipelines for eclipsing binaries; transit stacking and validation for small circumbinary planets.</p>
           </article>
+
           <article class="card">
             <h3>Scientific Computing</h3>
             <p>Numerical methods, N-body integrations, and performance-minded Python for large photometric datasets.</p>
@@ -110,65 +111,62 @@
       </div>
     </section>
 
-<!-- ===== Featured Work ===== -->
-<section class="section">
-  <div class="container">
-    <div class="section__head">
-      <h2>Featured Work</h2>
-    </div>
+    <!-- ===== Featured Work ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Featured Work</h2>
+        </div>
 
-    <div class="grid">
-      <!-- STANLEY -->
-      <a class="tile" href="brand-site/pages/astrophysics.html#stanley">
-        <div class="tile__media">
-          <img src="brand-site/public/TESS.webp" alt="TESS light curve with eclipses highlighted">
-        </div>
-        <div class="tile__body">
-          <h3>STANLEY: Circumbinary Planet Search</h3>
-          <p>
-            Stanley algorithm designed for Kepler adapted into EB pipeline for TESS combining gap-aware preprocessing, robust detrending,
-            BIC-gated harmonic removal, and a coarse-to-fine parallel BLS with iterative validation
-            and BJD0 alignment. Models eclipses (Gaussian vs. tanh) and vets secondaries with
-            \(e,\ \omega\) estimates; validated by injection–recovery and runtime scaling.
-          </p>
-        </div>
-      </a>
+        <div class="grid">
+          <!-- STANLEY -->
+          <a class="tile" href="brand-site/pages/astrophysics.html#stanley">
+            <div class="tile__media">
+              <img src="brand-site/public/TESS.webp" alt="TESS light curve with eclipses highlighted">
+            </div>
+            <div class="tile__body">
+              <h3>STANLEY: Circumbinary Planet Search</h3>
+              <p>
+                Stanley algorithm designed for Kepler adapted into EB pipeline for TESS combining gap-aware preprocessing, robust detrending,
+                BIC-gated harmonic removal, and a coarse-to-fine parallel BLS with iterative validation and BJD0 alignment. Models eclipses
+                (Gaussian vs. tanh) and vets secondaries with \(e,\ \omega\) estimates; validated by injection–recovery and runtime scaling.
+              </p>
+            </div>
+          </a>
 
-      <!-- HeartFelt -->
-      <a class="tile" href="brand-site/pages/engineering.html#heartfelt">
-        <div class="tile__media">
-          <img src="brand-site/public/HeartFelt.png" alt="Haptic glove and GUI for catheterization training">
-        </div>
-        <div class="tile__body">
-          <h3>HeartFelt: Haptic Feedback System</h3>
-          <p>
-            Clip-on haptics for cardiac catheterization: glove prototype with vibration motors,
-            custom amplification/driver circuitry, and clinical GUI (waveform view, diagnostics,
-            Boolean/analog I/O, gain). Designed to intravascular standards—biocompatibility,
-            cleanability, corrosion/fluid ingress protection, labeling/packaging—and verified with
-            materials/response-time tests.
-          </p>
-        </div>
-      </a>
+          <!-- HeartFelt -->
+          <a class="tile" href="brand-site/pages/engineering.html#heartfelt">
+            <div class="tile__media">
+              <img src="brand-site/public/HeartFelt.png" alt="Haptic glove and GUI for catheterization training">
+            </div>
+            <div class="tile__body">
+              <h3>HeartFelt: Haptic Feedback System</h3>
+              <p>
+                Clip-on haptics for cardiac catheterization: glove prototype with vibration motors, custom amplification/driver circuitry, and clinical GUI (waveform view, diagnostics,
+                Boolean/analog I/O, gain). Designed to intravascular standards—biocompatibility, cleanability, corrosion/fluid ingress protection, labeling/packaging—and verified with
+                materials/response-time tests.
+              </p>
+            </div>
+          </a>
 
-      <!-- MCMC Build -->
-      <a class="tile" href="brand-site/pages/astrophysics.html#mcmc-build">
-        <div class="tile__media">
-          <img src="brand-site/public/MCMCStarSpotModulation.png" alt="Plot of posterior samples and trace of a Metropolis–Hastings run">
+          <!-- MCMC Build -->
+          <a class="tile" href="brand-site/pages/astrophysics.html#mcmc-build">
+            <div class="tile__media">
+              <img src="brand-site/public/MCMCStarSpotModulation.png" alt="Plot of posterior samples and trace of a Metropolis–Hastings run">
+            </div>
+            <div class="tile__body">
+              <h3>MCMC Build: Metropolis–Hastings from Scratch</h3>
+              <p>
+                Tutorial + sampler with pluggable models and user-defined priors via a dictionary (e.g., log-normal amplitudes/noise; Gaussian frequency/phase/offset; bounded physical
+                priors like eccentricity). Explains likelihoods/posteriors and visualizes convergence and sampler oscillation around the mean. Example application to spot modulation in
+                CM Draconis.
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="tile__body">
-          <h3>MCMC Build: Metropolis–Hastings from Scratch</h3>
-          <p>
-            Tutorial + sampler with pluggable models and user-defined priors via a dictionary
-            (e.g., log-normal amplitudes/noise; Gaussian frequency/phase/offset; bounded physical
-            priors like eccentricity). Explains likelihoods/posteriors and visualizes convergence and
-            sampler oscillation around the mean. Example application to spot modulation in CM Draconis.
-          </p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
+  </main>
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
