@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://tkleanthoust.github.io/TKleanthous-Website/sitemap.xml
+Sitemap: https://tkleanthoust.github.io/TKleanthous-Website/sitemap1.xml
