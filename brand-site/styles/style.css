@@ -66,7 +66,7 @@ p { margin: 0 0 var(--space-2); }
 
 /* ===== Header & Nav ===== */
 .site-header {
-  position: sticky;
+  position: relative; z-index: 2; 
   top: 0;
   z-index: 50;
   background: color-mix(in lab, var(--color-bg) 86%, transparent);
@@ -74,6 +74,7 @@ p { margin: 0 0 var(--space-2); }
 }
 
 .header__inner {
+  position: relative; z-index: 2; 
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -83,8 +84,9 @@ p { margin: 0 0 var(--space-2); }
 
 /* Brand */
 .brand {
-  display: inline-flex;
-  align-items: center;
+  position: relative; z-index: 2; 
+  display: inline-flex; 
+  align-items: center; 
   gap: .75rem;
   color: var(--color-text);
   text-decoration: none;
@@ -139,6 +141,7 @@ p { margin: 0 0 var(--space-2); }
   height: 1px;
   background: linear-gradient(90deg, transparent, color-mix(in lab, var(--color-accent) 45%, #0000), transparent);
   opacity: .9;
+  pointer-events: none;
 }
 
 /* ===== Buttons ===== */
