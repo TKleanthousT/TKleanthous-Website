@@ -339,26 +339,3 @@ p { margin: 0 0 var(--space-2); }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
-
-/* --- Compact vertical spacing (site-wide) --- */
-.hero { padding-block: 3rem; }              /* was likely 4–6rem */
-.section { padding-block: 2.5rem; }         /* reduce section padding */
-.section--surface { padding-block: 2.5rem; }
-
-/* Head + intros */
-.section .section__head { margin-bottom: 1.25rem; }
-
-/* Card/tile layouts */
-.grid { gap: 1.25rem; }
-.cards { gap: 1rem; }
-.tile__body h3 { margin-bottom: 0.25rem; }
-
-/* Headings: slightly tighter */
-h1, h2, h3 { margin-top: 0; margin-bottom: 0.5em; }
-
-/* Optional: even tighter on small screens */
-@media (max-width: 700px) {
-  .hero { padding-block: 2.25rem; }
-  .section, .section--surface { padding-block: 2rem; }
-  .grid { gap: 1rem; }
-}
