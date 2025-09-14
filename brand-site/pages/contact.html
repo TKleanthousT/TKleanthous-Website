@@ -10,7 +10,6 @@
 
   <link rel="canonical" href="https://tkleanthoust.github.io/TKleanthous-Website/brand-site/pages/contact.html" />
 
-  <!-- Optional but nice for sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tkleanthoust.github.io/TKleanthous-Website/brand-site/pages/contact.html">
   <meta property="og:title" content="Contact — Tess Kleanthous">
@@ -59,7 +58,6 @@
   </style>
 </head>
 <body>
-  <!-- ===== Header + Nav ===== -->
   <header class="site-header" role="banner">
     <div class="container header__inner">
       <a class="brand" href="/TKleanthous-Website/" aria-label="Home">
@@ -77,12 +75,10 @@
         <a href="Kleanthous_CV.pdf" class="button button--primary" target="_blank" rel="noopener">Curriculum Vitae</a>
       </nav>
     </div>
-    <!-- Fading line under nav -->
     <div class="header-fade" aria-hidden="true"></div>
   </header>
 
   <main id="content" tabindex="-1">
-    <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
@@ -105,7 +101,6 @@
       </div>
     </section>
 
-    <!-- ===== Contact Form ===== -->
     <section class="section" id="form">
       <div class="container">
         <div class="section__head">
@@ -149,12 +144,8 @@
           <div id="formAlert" class="alert" role="status" aria-live="polite"></div>
         </form>
 
-        <!-- Submission helper script -->
         <script>
-          // Lightweight client-side handler:
-          // - Validates required fields
-          // - If OK, opens a mailto: draft with prefilled body (works on static hosting)
-          // - You can swap this for Formspree/Netlify; see comments below.
+
           (function () {
             const form = document.getElementById('contactForm');
             const alertEl = document.getElementById('formAlert');
@@ -168,7 +159,7 @@
               e.preventDefault();
 
               const hp = form.website.value.trim();
-              if (hp) return; // honeypot: silently ignore
+              if (hp) return;
 
               const name = form.name.value.trim();
               const email = form.email.value.trim();
@@ -180,7 +171,6 @@
                 return;
               }
 
-              // very simple email check
               if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                 setAlert('Please enter a valid email address.', false);
                 return;
