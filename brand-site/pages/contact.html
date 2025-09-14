@@ -22,7 +22,6 @@
   <meta name="twitter:description" content="Get in touch with Tess Kleanthous for research, engineering, or collaboration.">
   <meta name="twitter:image" content="https://tkleanthoust.github.io/TKleanthous-Website/brand-site/public/Headshot.jpeg">
 
-  <!-- Form styles (minimal; uses your tokens) -->
   <style>
     .form {
       display: grid;
@@ -187,8 +186,7 @@
                 return;
               }
 
-              // Build mailto draft
-              const to = 'tklean01@tufts.edu'; // TODO: replace with your address
+              const to = 'tklean01@tufts.edu';
               const body = [
                 `Name: ${name}`,
                 `Email: ${email}`,
@@ -204,20 +202,10 @@
               form.reset();
             });
           })();
-
-          /* 
-            PRODUCTION OPTION (no code changes to your backend):
-            - Sign up for Formspree (free) and get an endpoint like https://formspree.io/f/xxxx
-            - Replace the <form> tag with:
-                <form class="form" id="contactForm" action="https://formspree.io/f/xxxx" method="POST">
-              Keep the same inputs (name/email/subject/message).
-            - Remove the JS handler above (or keep it as a fallback).
-          */
         </script>
       </div>
     </section>
 
-    <!-- ===== Quick Links ===== -->
     <section class="section section--surface" id="links">
       <div class="container">
         <div class="section__head">
