@@ -10,7 +10,6 @@ Live site: [tkleanthoust.github.io/TKleanthous-Website](https://tkleanthoust.git
 
 ## Structure
 - `index.html` — Homepage  
-- `index/` — Background, highlights
 - `research/` — Research focus, publications, and presentations  
 - `projects/` — Coding and data analysis projects  
 - `art/` — Personal art portfolio (graphite, acrylic, digital)  
