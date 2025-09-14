@@ -10,14 +10,14 @@ Live site: [tkleanthoust.github.io/TKleanthous-Website](https://tkleanthoust.git
 
 ## Structure
 - `index.html` — Homepage  
-- `about/` — Background, CV, and academic information  
+- `index/` — Background, highlights
 - `research/` — Research focus, publications, and presentations  
 - `projects/` — Coding and data analysis projects  
 - `art/` — Personal art portfolio (graphite, acrylic, digital)  
 - `contact/` — Contact information and links  
-- `assets/` — Images, icons, and stylesheets  
+- `public/` — Images, icons, etc
+- `styles/` — style sheets
 - `sitemap.xml` — Sitemap for search engine indexing  
-
 ---
 
 ## Tech Stack
