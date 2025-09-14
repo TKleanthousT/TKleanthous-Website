@@ -109,7 +109,6 @@
         </div>
 
         <form class="form" id="contactForm" novalidate>
-          <!-- Honeypot (anti-spam) -->
           <div class="visually-hidden" aria-hidden="true">
             <label for="website">Website</label>
             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
@@ -183,7 +182,7 @@
                 `Subject: ${subject}`,
                 '',
                 message
-              ].join('%0D%0A'); // encoded newlines
+              ].join('%0D%0A');
 
               const href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent('[Site] ' + subject)}&body=${body}`;
               window.location.href = href;
@@ -228,7 +227,6 @@
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer__inner">
       <p>© <span id="year"></span> Tess Kleanthous</p>

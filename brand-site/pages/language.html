@@ -11,7 +11,6 @@
 
   <link rel="canonical" href="https://tkleanthoust.github.io/TKleanthous-Website/brand-site/pages/language.html" />
 
-  <!-- Optional but nice for sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tkleanthoust.github.io/TKleanthous-Website/brand-site/pages/language.html">
   <meta property="og:title" content="Languages — Tess Kleanthous">
@@ -23,7 +22,6 @@
   <meta name="twitter:description" content="Language studies in Greek, French, and Spanish; travel map with visited locations.">
   <meta name="twitter:image" content="https://tkleanthoust.github.io/TKleanthous-Website/brand-site/public/Headshot.jpeg">
 
-  <!-- Leaflet (for the interactive map) -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -52,7 +50,6 @@
   </style>
 </head>
 <body>
-  <!-- ===== Header + Nav ===== -->
   <header class="site-header" role="banner">
     <div class="container header__inner">
       <a class="brand" href="/TKleanthous-Website/" aria-label="Home">
@@ -73,7 +70,6 @@
   </header>
 
   <main id="content" tabindex="-1">
-    <!-- ===== Hero ===== -->
     <section class="hero">
         <div class="container">
             <div class="hero__grid">
@@ -101,7 +97,6 @@
     </section>
 
 
-    <!-- ===== Other Coursework ===== -->
     <section class="section" id="coursework">
       <div class="container">
         <div class="section__head">
@@ -135,7 +130,6 @@
       </div>
     </section>
 
-    <!-- ===== French Minor ===== -->
     <section class="section section--surface" id="french-minor">
       <div class="container">
         <div class="section__head">
@@ -165,7 +159,6 @@
       </div>
     </section>
 
-    <!-- ===== Travel Map ===== -->
     <section class="section" id="travel">
       <div class="container">
         <div class="section__head">
@@ -183,7 +176,6 @@
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer__inner">
       <p>© <span id="year"></span> Tess Kleanthous</p>
@@ -192,7 +184,6 @@
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- Map setup -->
   <script>
     window.addEventListener('load', function () {
       const map = L.map('travel-map', { scrollWheelZoom: false }).setView([28, -25], 2.2);
