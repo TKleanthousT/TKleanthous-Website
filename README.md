@@ -44,7 +44,7 @@ The site is deployed using GitHub Pages.
 ---
 
 ## Contact
-- Email: [tkleanthous2001@gmail.com](mailto:tkleanthous2001@gmail.com)  
+- Email: [tklean01@tufts.edu](mailto:tklean01@tufts.edu)  
 - LinkedIn: [linkedin.com/in/tesskleanthous](https://www.linkedin.com/in/tesskleanthous)  
 - GitHub: [github.com/TKleanthousT](https://github.com/TKleanthousT)  
 
