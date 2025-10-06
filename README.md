@@ -1,4 +1,4 @@
-# Tess Kleanthous — Personal Website
+# Tess Kleanthous - Personal Website
 
 ## Overview
 This repository contains the source code for my personal website.  
@@ -9,15 +9,15 @@ Live site: [tkleanthoust.github.io/TKleanthous-Website](https://tkleanthoust.git
 ---
 
 ## Structure
-- `index.html` — Homepage  
-- `astrophysics/` — Research focus, publications, and presentations  
-- `engineering/` — Engineering work and product design
-- `art/` — Personal art portfolio (graphite, acrylic, digital) 
-- `language/` — Language learning
-- `contact/` — Contact information and links  
-- `public/` — Images, icons, etc
-- `styles/` — style sheets
-- `sitemap.xml` — Sitemap for search engine indexing  
+- `index.html` - Homepage  
+- `astrophysics/` - Research focus, publications, and presentations  
+- `engineering/` - Engineering work and product design
+- `art/` - Personal art portfolio (graphite, acrylic, digital) 
+- `language/` - Language learning
+- `contact/` - Contact information and links  
+- `public/` - Images, icons, etc
+- `styles/` - style sheets
+- `sitemap.xml` - Sitemap for search engine indexing  
 ---
 
 ## Tech Stack
