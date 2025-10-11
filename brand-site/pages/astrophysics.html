@@ -20,7 +20,68 @@
   <meta name="twitter:description" content="Graduate Research at Tufts; Astrophysical Laboratory work in MCMC modeling and EBs; Datasets and tools used for TESS light-curve analysis.">
   <meta name="twitter:image" content="https://tkleanthoust.github.io/TKleanthous-Website/brand-site/public/Headshot.jpeg">
 
+  <style>
+    /* Tabs styling for teaching tools */
+    .tabs__list {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .tabs__tab {
+      appearance: none;
+      border: 1px solid var(--border, #ddd);
+      background: var(--surface, #fff);
+      padding: .5rem .9rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      transition: all .2s ease;
+    }
+    .tabs__tab:hover {
+      background: var(--surface-2, #f7f8fa);
+    }
+    .tabs__tab.is-active {
+      background: var(--accent-05, #eef1ff);
+      border-color: var(--accent-20, #aab8ff);
+      color: var(--brand, #4d5bc2);
+    }
+    .tabs__panel {
+      display: none;
+    }
+    .tabs__panel.is-active {
+      display: block;
+    }
+    .grid.grid--2 {
+      display: grid;
+      grid-template-columns: 1.05fr 1.3fr;
+      gap: clamp(1rem, 3vw, 2rem);
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .grid.grid--2 {
+        grid-template-columns: 1fr;
+      }
+    }
+    .ratio {
+      position: relative;
+      width: 100%;
+    }
+    .ratio--16x9 {
+      padding-bottom: 56.25%;
+    }
+    .ratio > iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg, 0 8px 24px rgba(0,0,0,.08));
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header" role="banner">
     <div class="container header__inner">
@@ -42,17 +103,19 @@
   </header>
 
   <main id="content" tabindex="-1">
+    <!-- ================= HERO ================= -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
           <h1>Astrophysics</h1>
           <p class="lead">
-            Eclipsing binaries, circumbinary planets, and celestial mechanics. I develop robust pipelines for TESS light curves-combining detrending, period validation, eclipse modeling, and rigorous vetting.
+            Eclipsing binaries, circumbinary planets, and celestial mechanics. I develop robust pipelines for TESS light curves—combining detrending, period validation, eclipse modeling, and rigorous vetting.
           </p>
           <div class="hero__cta">
             <a class="button" href="#pi">Graduate Research</a>
             <a class="button" href="#lab">Astrophysics Laboratory</a>
             <a class="button button--ghost" href="#datasets">Datasets & Tools</a>
+            <a class="button button--ghost" href="#teaching-tools">Teaching Tools</a>
           </div>
         </div>
         <figure class="hero__card">
@@ -65,6 +128,7 @@
       </div>
     </section>
 
+    <!-- ================= GRAD RESEARCH ================= -->
     <section class="section" id="pi">
       <div class="container">
         <div class="section__head">
@@ -90,7 +154,7 @@
               <p class="muted">In preparation</p>
             </header>
             <ul>
-              <li><strong>Lead author:</strong> Manuscript describing the STANLEY pipeline's application to TESS Eclipsing Binaries-to be submitted for peer-reviewed publication.</li>
+              <li><strong>Lead author:</strong> Manuscript describing the STANLEY pipeline's application to TESS Eclipsing Binaries—to be submitted for peer-reviewed publication.</li>
             </ul>
             <div class="about__cta" style="margin-top:.5rem;">
               <a class="button button--ghost" href="Kleanthous_CV.pdf" target="_blank" rel="noopener">CV</a>
@@ -101,6 +165,7 @@
       </div>
     </section>
 
+    <!-- ================= ASTRO LAB ================= -->
     <section class="section" id="lab">
       <div class="container">
         <div class="section__head">
@@ -136,7 +201,6 @@
                 <li>Periods and eccentricities show low p-scores, indicating eclipsing binaries are not representative of the overall population.</li>
                 <li>Stellar radii yield higher p-scores, consistent with the overall population.</li>
               </ul>
-
             </div>
           </a>
         </div>
@@ -147,6 +211,7 @@
       </div>
     </section>
 
+    <!-- ================= DATASETS ================= -->
     <section class="section section--surface" id="datasets">
       <div class="container">
         <div class="section__head">
@@ -156,36 +221,70 @@
 
         <div class="cards">
           <article class="card">
-            <header>
-              <h3>Datasets</h3>
-            </header>
+            <header><h3>Datasets</h3></header>
             <ul>
               <li><span class="tag">TESS</span> 20-second Target Pixel Files</li>
               <li><span class="tag">Catalogs</span> ANTIC, Villanova EB</li>
-              <li><span class="tag">Eclipsing Binaries</span> EBs curated for CBP searches & validation</li>
+              <li><span class="tag">Eclipsing Binaries</span> curated for CBP searches & validation</li>
             </ul>
           </article>
-
           <article class="card">
-            <header>
-              <h3>Software & Methods</h3>
-            </header>
+            <header><h3>Software & Methods</h3></header>
             <ul>
               <li><span class="tag">Python</span> NumPy, SciPy, Lightkurve</li>
               <li><span class="tag">Dynamics</span> Rebound / N-body</li>
-              <li><span class="tag">Statistical Significance</span> Completeness, reliability, SDE diagnostics</li>
+              <li><span class="tag">Statistics</span> Completeness, reliability, SDE diagnostics</li>
             </ul>
           </article>
-
           <article class="card">
-            <header>
-              <h3>Compute</h3>
-            </header>
+            <header><h3>Compute</h3></header>
             <ul>
               <li><span class="tag">HPC</span> SLURM arrays, per-target caching, batch runs</li>
-              <li><span class="tag">Reproducibility</span> Notebooks & saved figures for validation</li>
+              <li><span class="tag">Reproducibility</span> notebooks & saved figures for validation</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TEACHING TOOLS (TABBED DECK) ================= -->
+    <section class="section" id="teaching-tools">
+      <div class="container">
+        <div class="section__head">
+          <h2>Personal Projects & Teaching Tools</h2>
+          <p class="muted">Interactive demos for celestial mechanics, built for outreach and instruction.</p>
+        </div>
+
+        <div class="tabs" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Teaching Tools">
+            <!-- <button class="tabs__tab is-active" role="tab" aria-selected="true" aria-controls="tab-orbit" id="tab-orbit-btn">Orbital Visualizer</button> -->
+            <!-- More tabs can be added later -->
+          </div>
+
+          <div class="tabs__panels">
+            <!-- Panel 1 -->
+            <section class="tabs__panel is-active" id="tab-orbit" role="tabpanel" aria-labelledby="tab-orbit-btn">
+              <div class="grid grid--2">
+                <div>
+                  <h3>Orbital Elements Visualizer</h3>
+                  <p class="muted">Kepler time evolution, true anomaly, inclination, and node geometry.</p>
+                  <ul>
+                    <li>Interactive ν and t modes</li>
+                    <li>Velocity vector and orbital trail</li>
+                    <li>Exportable standalone HTML</li>
+                  </ul>
+                  <div style="margin-top:.75rem;">
+                    <a class="button" href="../public/orbit_viz.html" target="_blank" rel="noopener">Open Fullscreen</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ratio ratio--16x9">
+                    <iframe src="../public/orbit_viz.html" title="Interactive Orbit Visualizer" loading="lazy" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
@@ -198,6 +297,21 @@
     </div>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      // Tabs interactivity
+      document.querySelectorAll('[data-tabs]').forEach(tabs => {
+        const btns = tabs.querySelectorAll('.tabs__tab');
+        const panels = tabs.querySelectorAll('.tabs__panel');
+        btns.forEach((btn, i) => {
+          btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('is-active'));
+            panels.forEach(p => p.classList.remove('is-active'));
+            btn.classList.add('is-active');
+            panels[i].classList.add('is-active');
+            btn.setAttribute('aria-selected', 'true');
+            btns.forEach(b => b !== btn && b.setAttribute('aria-selected', 'false'));
+          });
+        });
+      });
     </script>
   </footer>
 </body>
