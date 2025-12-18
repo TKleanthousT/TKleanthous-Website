@@ -415,8 +415,11 @@ p { margin: 0 0 var(--space-2); }
   box-shadow: var(--shadow-lg, 0 8px 24px rgba(0,0,0,.08));
 }
 
-/* Optional: subtle fade for panel transitions */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(3px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.hero__highlights {
+  margin-top: 1.25rem;
 }
