@@ -2,7 +2,7 @@
 
 ## Overview
 This repository contains the source code for my personal website.  
-The site presents my academic background in astrophysics, ongoing research projects, coding work (including the Stanley pipeline for circumbinary planet detection), and personal interests such as art and language studies.
+The site presents my academic background in astrophysics, ongoing research projects, coding work (including the STANLEY pipeline for circumbinary planet detection), and personal interests such as art and language studies.
 
 Live site: [tkleanthoust.github.io/TKleanthous-Website](https://tkleanthoust.github.io/TKleanthous-Website)
 
