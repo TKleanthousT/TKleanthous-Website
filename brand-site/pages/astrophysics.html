@@ -112,8 +112,8 @@
             Eclipsing binaries, circumbinary planets, and celestial mechanics. I develop robust pipelines for TESS light curves—combining detrending, period validation, eclipse modeling, and rigorous vetting.
           </p>
           <div class="hero__cta">
-            <a class="button" href="#pi">Graduate Research</a>
-            <a class="button" href="#lab">Astrophysics Laboratory</a>
+            <a class="button button--ghost" href="#pi">Graduate Research</a>
+            <a class="button button--ghost" href="#lab">Astrophysics Laboratory</a>
             <a class="button button--ghost" href="#datasets">Datasets & Tools</a>
             <a class="button button--ghost" href="#teaching-tools">Teaching Tools</a>
           </div>
@@ -129,41 +129,70 @@
     </section>
 
     <!-- ================= GRAD RESEARCH ================= -->
-    <section class="section" id="pi">
-      <div class="container">
-        <div class="section__head">
-          <h2>Graduate Research Assistant</h2>
-          <p class="muted">Tufts University • Sep 2024 – present • Supervisor: David Martin</p>
-        </div>
+<section class="section" id="pi">
+  <div class="container">
+    <div class="section__head">
+      <h2>Graduate Research Assistant</h2>
+      <p class="muted">Tufts University • Sep 2024 – present • Supervisor: David Martin</p>
+    </div>
 
-        <div class="cards">
-          <article class="card">
-            <header>
-              <h3>Project Title</h3>
-              <p class="muted"><em>A Robust Pipeline for TESS Eclipsing Binaries: Detrending, Period Validation, Eclipse Modeling, and Vetting</em></p>
-            </header>
-            <ul>
-              <li>Optimized the <strong>STANLEY</strong> algorithm to analyze TESS photometry for a systematic, automated search for circumbinary planets (CBPs).</li>
-              <li>End-to-end framework: gap-aware preprocessing, harmonic removal with model selection, iterative BLS & period refinement, eclipse modeling, and secondary-vetting logic.</li>
-            </ul>
-          </article>
+    <div class="cards">
+      <article class="card">
+        <header>
+          <h3>Project</h3>
+          <p class="muted">
+            <em>A Robust Pipeline for TESS Eclipsing Binaries: Detrending, Period Validation, Eclipse Modeling, and Vetting</em>
+          </p>
+        </header>
+        <ul>
+          <li>
+            Optimized the <strong>STANLEY</strong> algorithm to analyze TESS photometry for a systematic,
+            automated search for circumbinary planets (CBPs).
+          </li>
+          <li>
+            End-to-end framework including gap-aware preprocessing, harmonic removal with model selection,
+            iterative BLS and period refinement, eclipse modeling, and astrophysical vetting of secondary eclipses.
+          </li>
+        </ul>
 
-          <article class="card">
-            <header>
-              <h3>Publications</h3>
-              <p class="muted">In preparation</p>
-            </header>
-            <ul>
-              <li><strong>Lead author:</strong> Manuscript describing the STANLEY pipeline's application to TESS Eclipsing Binaries—to be submitted for peer-reviewed publication.</li>
-            </ul>
-            <div class="about__cta" style="margin-top:.5rem;">
-              <a class="button button--ghost" href="Kleanthous_CV.pdf" target="_blank" rel="noopener">CV</a>
-              <a class="button" href="contact.html">Contact</a>
-            </div>
-          </article>
+        <div class="about__cta" style="margin-top:.5rem;">
+          <a class="button" href="https://github.com/TKleanthousT/stanley_cbp" target="_blank" rel="noopener">
+            Stanley Code Repository
+          </a>
         </div>
-      </div>
-    </section>
+      </article>
+
+      <article class="card">
+        <header>
+          <h3>Publications & Research Outputs</h3>
+          <p class="muted">In preparation / Public release</p>
+        </header>
+        <ul>
+          <li>
+            <strong>Kleanthous, T.</strong> et al.
+            <em>“A Robust Pipeline for TESS Eclipsing Binaries: Detrending, Period Validation, Eclipse Modeling, and Vetting.”</em>
+            — Lead author (in preparation).
+          </li>
+          <li>
+            <strong>Tubthong, W.</strong> et al.
+            <em>“Small Circumbinary Planet Abundance.”</em>
+            — Co-author; Kepler circumbinary planet occurrence rates using the
+            <em>STANLEY</em> algorithm (in preparation).
+          </li>
+          <li>
+            <strong>Stanley Code Repository.</strong>
+            Public release of the <em>STANLEY</em> circumbinary planet detection pipeline on GitHub (Dec 2025).
+          </li>
+        </ul>
+
+        <div class="about__cta" style="margin-top:.5rem;">
+          <a class="button" href="Kleanthous_CV.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="button" href="contact.html">Contact</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
     <!-- ================= ASTRO LAB ================= -->
     <section class="section" id="lab">
@@ -203,10 +232,6 @@
               </ul>
             </div>
           </a>
-        </div>
-
-        <div class="about__cta" style="margin-top: var(--space-3);">
-          <a class="button button--ghost" href="https://github.com/TKleanthousT">Github</a>
         </div>
       </div>
     </section>
